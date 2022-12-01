@@ -1,3 +1,4 @@
+//Alan Yuan Period 7-8 even 11/22/22 CodeBreaker
 function initialize(){
     clock = document.getElementById("clock");
     display = document.getElementById("display");
