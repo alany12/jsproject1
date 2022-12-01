@@ -6,38 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeBreaker</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #vault {
+            border: 1px solid black;
+            width: 200px;
+            display: grid;
+        }
+        #playerGuess {
+            margin: auto auto;
+        }
+        #buttons {
+            margin: 10px auto;
+        }
+    </style>
 </head>
 <body onload="initialize()">
-    <h1>CodeBreaker</h1>
-    <div class="container">
-            <div class="clockContainer">
-                Guesses Left: 
-            <div id="clock"></div>
-            </div>
-        <div class="show">
-            <div id="display"></div>
+    <h1>Codebreaker</h1>
+
+    <h2 id="clock">Remaining guesses: 7</h2>
+    <div id="vault">
+        <h3 id="playerGuess">---</h3>
+        <div id="buttons">
+            <button id="one" onclick="guessOne()">1</button>
+            <button id="two" onclick="guessTwo()">2</button>
+            <button id="three" onclick="guessThree()">3</button>
         </div>
-        <div class="userContainer">
-            <div class="subContainer">
-                <div class="logDisplay">
-                <div id="log">Previous Guesses:</div>
-                </div>
-                <div class="buttonWrapper">
-                    <div class="buttons" id="displayButtons">
-                        <button id="button1" onclick="changeValue1()">0</button>
-                        <button id="button2" onclick="changeValue2()">0</button>
-                        <button id="button3" onclick="changeValue3()">0</button>
-                    </div>
-                    <div class="buttons" id="optionButtons">
-                        <button id="reset" onclick="reset();">Reset</button>
-                        <button id="Clear" onclick="clearUserCode()">Clear</button>
-                        <button id="Submit" onclick="checkCode()">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <button id="clearGuess" onclick="clearAll()">Clear</button>
     </div>
+    <p id="log">
+        
+    </p>
+
+    <script src='script.js'></script>
 </body>
 </html>
