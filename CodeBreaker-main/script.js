@@ -76,7 +76,7 @@ function display() {
     }
 }
 
-function clearAll() {
+function resetAll() {
     playerGuessNum = "";
     display();
 }
